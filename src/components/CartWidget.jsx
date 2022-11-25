@@ -1,11 +1,13 @@
 import React from "react";
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 
-const CartWidget = () => {
+function CartWidget() {
     return (
-        <button type="button" className="btn btn-warning position-relative">
-            <img src="images/cart.svg" alt="Carrito" width="32" />
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span>
-        </button>
+        <Button variant="primary" className="btnCarrito position-absolute end-0" >
+            <img src="images/cart.svg" alt="Carrito" width="32" /><Badge bg="danger">1</Badge>
+            <span className="visually-hidden">unread messages</span>
+        </Button>
     )
 }
 

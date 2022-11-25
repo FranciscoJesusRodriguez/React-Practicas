@@ -1,40 +1,38 @@
-import React from "react";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from './CartWidget';
 
-const NavBar = () => {
+function NavBar() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Celulares</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TV y Smart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Accesorios</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown link
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    )
+        <>
+            <Navbar bg="light" expand="lg" className="position-relative">
+                <Container>
+                    <Navbar.Brand href="#home">Celuland</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="#home">Celulares</Nav.Link>
+                            <Nav.Link href="#link">TV y Smart</Nav.Link>
+                            <NavDropdown title="Accesorios" id="basic-nav-dropdown">
+                                <NavDropdown.Item href="#action/3.1">Auriculares</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">
+                                    Cables
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3">Soporte</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.4">
+                                    Controles
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+                <CartWidget />
+            </Navbar>
+        </>
+    );
 }
 
 export default NavBar;
