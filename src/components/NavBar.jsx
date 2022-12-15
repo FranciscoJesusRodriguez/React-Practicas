@@ -1,38 +1,40 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import CartWidget from './CartWidget';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
-function NavBar() {
+const NavBar = () => {
     return (
-        <>
-            <Navbar bg="light" expand="lg" className="position-relative">
-                <Container>
-                    <Navbar.Brand href="#home">Celuland</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#home">Celulares</Nav.Link>
-                            <Nav.Link href="#link">TV y Smart</Nav.Link>
-                            <NavDropdown title="Accesorios" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Auriculares</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Cables
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Soporte</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Controles
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-                <CartWidget />
-            </Navbar>
-        </>
-    );
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6">
+                    <nav className="navbar navbar-expand-lg  mb-5">
+                        <div className="container-fluid">
+                            <Link className="navbar-brand" to={"/"}>Celuland</Link>
+                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                            <div className="collapse navbar-collapse" id="navbarNav">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <NavLink className="nav-link" activeclassname="page" to={"/category/celulares"}>Celulares</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink className="nav-link" activeclassname="page" to={"/category/tvysmart"}>TV y Smart</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink className="nav-link" activeclassname="page" to={"/category/accesorios"}>Bebidas</NavLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div className="col-md-6 d-flex align-items-center justify-content-end">
+                    <CartWidget />
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default NavBar;

@@ -1,0 +1,11 @@
+[
+    { "id": 1, "nombre": "Motorola E20", "almacenamiento": 64, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/motoE20.png", "precio": 36.999, "stock": 10, "categoria": "celulares" },
+    { "id": 2, "nombre": "Motorola E40", "almacenamiento": 128, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/motoE40.png", "precio": 53.090, "stock": 9, "categoria": "celulares" },
+    { "id": 3, "nombre": "Motorola G51", "almacenamiento": 128, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/motog51.png", "precio": 93.135, "stock": 8, "categoria": "celulares" },
+    { "id": 4, "nombre": "Motorola G52", "almacenamiento": 256, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/motog52.png", "precio": 60.999, "stock": 6, "categoria": "celulares" },
+    { "id": 5, "nombre": "Samsung A32", "almacenamiento": 128, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/samsungA32.png", "precio": 93.500, "stock": 7, "categoria": "celulares" },
+    { "id": 6, "nombre": "Samsung A33", "almacenamiento": 256, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/samsungA33.png", "precio": 99.999, "stock": 6, "categoria": "celulares" },
+    { "id": 7, "nombre": "Samsung S10", "almacenamiento": 64, "descripcion": "vDescripción a completar (página en construcción).", "imagen": "/images/samsungS10.png", "precio": 70.430, "stock": 12, "categoria": "celulares" },
+    { "id": 8, "nombre": "LG K10", "almacenamiento": 16, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/lgK10.png", "precio": 30.000, "stock": 10, "categoria": "celulares" },
+    { "id": 9, "nombre": "LG k22", "almacenamiento": 32, "descripcion": "Descripción a completar (página en construcción).", "imagen": "/images/lgK22.png", "precio": 40.000, "stock": 8, "categoria": "celulares" }
+]
